@@ -83,23 +83,19 @@
 //         arr[i] = el;
 //     }
 //     return arr; 
-
 // }
 // Console.WriteLine($"{ElArr(array, 8)}");
 
 
 
-
-
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-// void Print()
-// {
-//     Console.WriteLine("Введите 8 чисел, которое хотите записать в массив");
-//     int[] array = Console.ReadLine().Split(' ', ',', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
-//     Console.WriteLine(string.Join(", ", array));
-// }
-// Print();
+void InputArrPrint()
+{
+    Console.WriteLine("Введите 8 чисел, которое хотите записать в массив (через пробел)");
+    int[] array = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+    Console.WriteLine(string.Join(", ", array));
+}
+InputArrPrint();
 
 
 
@@ -155,13 +151,17 @@
 
 // Задача 26. - HARD необязательная Напишите программу, которая принимает на вход 
 // целое или дробное число и выдаёт количество цифр в числе.
-
 // 452 -> 3
-
 // 82 -> 2
-
 // 9,012 ->4
 
+// Console.WriteLine("Введите число ");
+// double n = Convert.ToDouble(Console.ReadLine());
+// int a = (int)Math.Log10(n) + 1;
+// int b = a % 10;
+// int c = (int)Math.Log10(b) + 1;
+// int d = a + c;
+// Console.WriteLine($"{a} {c} {d}");
 
 
 
