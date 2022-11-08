@@ -92,7 +92,7 @@
 // int tail = rev/10;
 
 // Console.WriteLine("The reverse of the number is: " + rev  +"  "+tail+"  "+a);
-
+// int x = a;
 // int y = x;
 // int i = 0;
 // int c = 0;
@@ -110,6 +110,23 @@
 //     Console.WriteLine($"{y} {x} {i} {z}");
 // }
 // Console.WriteLine($"s{i}");
+
+
+
+
+
+
+Console.Write("Введите число: ");
+int number = int.Parse(Console.ReadLine());
+int digitsCount = (int)Math.Log10(number) + 1; // всего цифр в числе
+int multiplier = (int)Math.Pow(10, digitsCount - 2); // множитель предпоследнего разряда
+int result = number % multiplier + number / multiplier / 10 * multiplier; // все что справа от разряда + все что слева, делённое на 10
+Console.WriteLine(result); 
+
+
+
+
+
 
 
 
@@ -149,11 +166,11 @@
 //     print(a, b + 'ов')
 
 
-Console.WriteLine("Введите колличество программистов");
-int x = Convert.ToInt32(Console.ReadLine());
-string prog = "программист";
-if (x == 1 || x % 10 == 1 && x % 100 != 11) Console.WriteLine($"{x} {prog}");
-else if (1 < x % 10 && x % 10 < 5 && ~ 10 < x % 100 && x % 100 < 15) Console.WriteLine($"{x} {prog}а");
-else Console.WriteLine($"{x} {prog}ов");
+// Console.WriteLine("Введите колличество программистов");
+// int x = Convert.ToInt32(Console.ReadLine());
+// string prog = "программист";
+// if (x == 1 || x % 10 == 1 && x % 100 != 11) Console.WriteLine($"{x} {prog}");
+// else if (1 < x % 10 && x % 10 < 5 && ~ 10 < x % 100 && x % 100 < 15) Console.WriteLine($"{x} {prog}а");
+// else Console.WriteLine($"{x} {prog}ов");
 
 

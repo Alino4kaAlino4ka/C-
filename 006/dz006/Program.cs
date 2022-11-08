@@ -5,20 +5,20 @@
 // 1, -7, 567, 89, 223-> 3
 
 
-// int[] InputArray()
-// {
-//     Console.WriteLine("Сколько чисел Вы хотите ввести?");
-//     int m = Convert.ToInt32(Console.ReadLine());
-//     int[] array = new int[m];
+int[] InputArray()
+{
+    Console.WriteLine("Сколько чисел Вы хотите ввести?");
+    int m = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[m];
 
-//     for (int i = 0; i < m; i++)
-//     {
-//         Console.WriteLine($"Введите число №{i + 1}");
-//         int n = Convert.ToInt32(Console.ReadLine());
-//         array[i] = n;
-//     }
-//     return array;
-// }
+    for (int i = 0; i < m; i++)
+    {
+        Console.WriteLine($"Введите число №{i + 1}");
+        int n = Convert.ToInt32(Console.ReadLine());
+        array[i] = n;
+    }
+    return array;
+}
 
 // int CountOfPositive(int[] array)
 // {
@@ -70,7 +70,40 @@
 
 
 
-// задача 40 - HARD необязательная. На вход программы подаются три целых положительных числа. Определить , является ли это сторонами треугольника. Если да, то вывести всю информацию по нему - площадь, периметр, значения углов треугольника в градусах, является ли он прямоугольным, равнобедренным, равносторонним.
+// задача 40 - HARD необязательная. На вход программы подаются три целых положительных числа. 
+// Определить , является ли это сторонами треугольника. 
+// Если да, то вывести всю информацию по нему - 
+// площадь, периметр, значения углов треугольника в градусах, 
+// является ли он прямоугольным, равнобедренным, равносторонним.
+
+
+// Console.WriteLine("Введите первое число");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите третье число");
+// int c = Convert.ToInt32(Console.ReadLine());
+
+// bool Checktriangle(int a, int b, int c)
+// {
+//     bool x = false;
+//     if ((a + b > c) && (b + c > a) && (a + c > b)) x = true;
+//     return x;
+// }
+// Console.WriteLine(Checktriangle(a, b, c));
+ 
+// int Perim(int a, int b, int c) 
+// {
+//     per = (a+b+c)/2;
+//     return per;
+// }
+// int p=(a+b+c)/2;
+// int s=sqrt(s*(s-a)*(s-b)*(s-c));
+
+
+
+
+
 
 // задача 2 HARD необязательная. 
 // Сгенерировать массив случайных целых чисел размерностью m*n (размерность вводим с клавиатуры).
@@ -78,17 +111,17 @@
 //  Найти минимальное число и его индекс, найти максимальное число и его индекс.
 //   Вывести эту информацию на экран.
 
-void PrintArray(int[,] matr)
-{
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            Console.Write($"{matr[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 void FillArray(int[,] matr)
 {
@@ -101,32 +134,32 @@ void FillArray(int[,] matr)
     }
 }
 
-void MinMax(int[,] matr)
-{
-    int min = matr[0, 0], max = matr[0, 0], imin = 0, jmin = 0, imax = 0, jmax = 0;
+// void MinMax(int[,] matr)
+// {
+//     int min = matr[0, 0], max = matr[0, 0], imin = 0, jmin = 0, imax = 0, jmax = 0;
 
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            if (matr[i,j] < min) { min = matr[i,j]; imin = i; jmin = j; }
-            else if (matr[i,j] > max) { max = matr[i,j]; imax = i; jmax = j; }
-        }
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             if (matr[i,j] < min) { min = matr[i,j]; imin = i; jmin = j; }
+//             else if (matr[i,j] > max) { max = matr[i,j]; imax = i; jmax = j; }
+//         }
 
-    }
-    Console.WriteLine($"Минимальное значение = {min}. Его индексы {imin} и {jmin} по вертикали и по горизонтали соотрветственно.");
-    Console.WriteLine($"Максимальное значение = {max}. Его индексы {imax} и {jmax} по вертикали и по горизонтали соотрветственно.");
+//     }
+//     Console.WriteLine($"Минимальное значение = {min}. Его индексы {imin} и {jmin} по вертикали и по горизонтали соотрветственно.");
+//     Console.WriteLine($"Максимальное значение = {max}. Его индексы {imax} и {jmax} по вертикали и по горизонтали соотрветственно.");
 
-}
+// }
 
-Console.WriteLine("Введите колличество строк");
-int x = Convert.ToInt16(Console.ReadLine());
-Console.WriteLine("Введите колличество столбцов");
-int y = Convert.ToInt16(Console.ReadLine());
+// Console.WriteLine("Введите колличество строк");
+// int x = Convert.ToInt16(Console.ReadLine());
+// Console.WriteLine("Введите колличество столбцов");
+// int y = Convert.ToInt16(Console.ReadLine());
 
-int[,] matrix = new int[x, y];
-FillArray(matrix);
-Console.WriteLine();
-PrintArray(matrix);
-Console.WriteLine();
-MinMax(matrix);
+// int[,] matrix = new int[x, y];
+// FillArray(matrix);
+// Console.WriteLine();
+// PrintArray(matrix);
+// Console.WriteLine();
+// MinMax(matrix);
